@@ -1,0 +1,399 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+        font-family: "Arial", sans-serif;
+      
+}
+
+body{
+    position: relative;
+    top: 50px;    
+    background-image: url('خلفية.jpeg'); 
+    background-size: cover; 
+    background-position: center; 
+    background-attachment: fixed; 
+    color: #027424;
+}
+
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo{
+    position: relative;
+     font-size: 25px;
+     color: rgb(5, 199, 69);
+     text-decoration: none;
+     font-weight: 600;
+}
+
+.navbar a {
+font-size: 18px;
+color: #01d81e;
+text-decoration: none;
+font-weight: 500;
+margin-left: 35px;
+transition: .3s;
+}
+
+.navbar a:hover ,
+.navbar a.active {
+    color: rgba(1, 112, 29, 0.733);
+}
+
+.home{
+    height: 100vh;
+    background:url();
+    display: flex;
+    align-items: center;
+    padding: 0 5%;
+
+}
+
+.home-content{
+    max-width: 600px;
+}
+
+.home-content h1 {
+    position: relative;
+    font-size: 40px;
+    font-weight: 700;
+    line-height:1;
+}
+
+
+.home-content h3 {
+position: relative;
+    font-size: 32px;
+    font-weight: 700;
+    color: #0df853;
+}
+
+
+.home-content p {
+    position: relative;
+    font-size: 20px;
+    margin:20px 0 37px
+}
+
+
+.home-content .btn-box{
+    position: relative;
+   display:flex;
+   justify-content: space-between;
+   width: 345px;
+   height:50px;
+
+}
+.btn-box a {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items:center;
+    width:15opx;
+    height:100%;
+    background: #88fa84;
+    border: 2px solid #84fa98;
+    border-radius:8px;
+    font-size:19px;
+    color: #028b3b;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing:1px;
+    z-index:1;
+    overflow: hidden;
+    transition:.5s;
+}
+
+.btn-box a:nth-child(1){
+    background: transparent;
+}
+
+
+.btn-box a:nth-child(1):hover{
+    color: #12b936
+}
+  
+
+
+.home-sci {
+    position:absolute;
+    bottom:40px;
+    width:170px;
+    display: flex;
+    justify-content: space-between
+}
+
+
+.home-sci a {
+position: relative;
+display: inline-flex;
+justify-content: center;
+align-items: center;
+width:40px;
+height:40px;
+background:transparent;
+border:2px solid #16d164;
+border-radius:50%;
+font-size:20px;
+color: #16d164;
+text-decoration:none;
+z-index:1;
+overflow: hidden;
+transition:.5s;
+}
+
+.home-sci a:hover{
+ color: #12e06f;
+
+}
+
+
+.home-imgHover{
+    position: absolute;
+    top:0;
+    right:30px;
+    width:550px;
+    height:100%;
+    background: transparent;
+    
+    transition: 3s;
+    animation:manipActiveHover .1s forwards;
+    animation-delay: 4s;
+    pointer-events: none;
+}
+
+
+/*KEYFRAMES ANIMATION*/
+@keyframes showRight {
+    100% {
+        width: 0;
+    }
+}
+
+@keyframes manipActiveHover {
+    100%{
+        pointer-events: auto;
+    }
+}
+.accessibility-buttons {
+        display: flex;
+        gap: 10px;
+        position: relative;
+        margin-top: 20px;
+        bottom: 8px; 
+    }
+
+.accessibility-buttons button {
+        width: 60px;
+        height: 40px;
+        border-radius: 25px;
+        background-color: #3ea857;
+        color: white;
+        border: none;
+        cursor: pointer;
+        font-size: 18px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+.bottom-container {
+    position: fixed;
+    bottom: 20px; 
+    right: 20px;
+    display: flex;
+    align-items: center;
+    gap: 5cm; 
+}
+
+.voice-input-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #cafad5;
+    padding: 10px;
+    border-radius: 25px;
+    border: 2px solid #28a745;
+}
+
+.voice-input {
+    width: 200px;
+    padding: 10px;
+    border-radius: 25px;
+    border: 2px solid #28a745;
+    font-size: 16px;
+    text-align: center;
+    outline: none;
+}
+
+.voice-input-container {
+    position: absolute;
+    bottom: 5px; 
+    right: 140px; 
+    background-color: #d4edda;
+    padding: 10px;
+    border-radius: 25px;
+    border: 2px solid #28a745;
+}
+
+
+
+
+.copyright {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    background-color: #28a745;
+    color: white;
+    padding: 10px;
+    font-size: 14px;
+}
+
+.body-setting {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    direction: rtl;
+    background-color: #f4f4f4;
+}
+
+.settings-container {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    z-index: 1000;
+}
+
+.settings-btn {
+    
+    color: rgb(8, 151, 32);
+    border: none;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    font-size: 20px;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+}
+
+.settings-btn:hover {
+    background-color:  #78f593;
+}
+
+.show {
+    display: block;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+}
+
+footer {
+    background-color: #31772a; 
+    color: white;
+    text-align: center; 
+    padding: 15px 0; 
+    font-size: 14px;
+    margin-top: auto; 
+}
+
+.body-video {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; 
+    margin: 0;
+}
+
+.video-footer {
+    background-color: #7bb37d; 
+    color: white; 
+    text-align: center; 
+    padding: 20px;
+    margin-top: auto; 
+}
+
+.video {
+    width: 100%;
+    max-width: 600px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(33, 194, 28, 0.548); 
+}
+
+
+/* زر الحفظ */
+.save-settings-btn {
+    background-color: #007bff; /* لون أزرق احترافي */
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 30px; /* زر دائري */
+    cursor: pointer;
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px; /* مسافة بين الأيقونة والنص */
+    margin-top: 20px;
+    width: 200px; /* عرض الزر */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* تأثير عند تمرير الماوس */
+.save-settings-btn:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+/* تأثير عند الضغط */
+.save-settings-btn:active {
+    background-color: #003d80;
+    transform: scale(0.95);
+}
+
+/* أيقونة الحفظ */
+.save-settings-btn i {
+    font-size: 20px;
+}
+
+
+/* لأجهزة الكمبيوتر */
+@media screen and (min-width: 1024px) {
+    body {
+      font-size: 18px;
+    }
+  }
+  
+  /* للأجهزة اللوحية */
+  @media screen and (max-width: 1024px) and (min-width: 768px) {
+    body {
+      font-size: 16px;
+    }
+  }
+  
+  /* للهواتف المحمولة */
+  @media screen and (max-width: 767px) {
+    body {
+      font-size: 14px;
+      padding: 10px;
+    }
+  }
+  

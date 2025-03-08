@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>المرافق</title> 
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 30px;
+            box-shadow: 0 0 10px rgba(31, 175, 50, 0.623);
+        }
+        h1 {
+            color: #333;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        li {
+            background: #a5a5a5e3;
+            color: rgb(5, 5, 5);
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        li:hover {
+            background: #cbcccb;
+        }
+        .facility-image {
+            width: 100%;
+            max-height: 200px;
+            object-fit: cover;
+            border-radius: 30px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 id="facilities-title">المرافق</h1>
+       <style>
+        ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+li {
+    text-align: center;
+    background: #f9f9f9;
+    padding: 15px;
+    margin: 10px;
+    border-radius: 30px;
+    box-shadow: 0 0 10px rgba(53, 218, 20, 0.548);
+    max-width: 250px;
+}
+
+p {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.facility-image {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 30px;
+}
+.facility-image, .facility-video {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 30px;
+}
+
+.facility-video {
+    max-height: 180px;
+}
+
+       </style>
+            <ul>
+                <li>
+                    <p>ثلاثة ملاعب لبطولات الجولف بما في ذلك ملعب سي فيو الشهير</p>
+                    <img class="facility-image" src="golf championship course.jpeg">
+                </li>
+                <li>
+                    <p>ناديان</p>
+                    <img class="facility-image" src="نادي.jpeg">
+                </li>
+                <li>
+                    <p>الإقامة في الفنادق</p>
+                    <img class="facility-image" src="فندق.jpeg">
+                </li>
+                <li>
+                    <p>المطاعم والمقاهي</p>
+                    <img class="facility-image" src="مطعم.jpeg">
+                </li>
+                <li>
+                    <p>متجر للمحترفين</p>
+                    <img class="facility-image" src="متجر.jpeg">
+                </li>
+                <li>
+                    <p>ساحة تدريب مُضاءة بالأنوار الكشَّافة</p>
+                    <img class="facility-image" src="ساحة تدريب مضائة.jpeg">
+                </li>
+                <li>
+                    <p>دروس الجولف</p>
+                    <video class="facility-video" controls>
+                        <source src="golf.mp4" type="video/mp4">
+                        متصفحك لا يدعم تشغيل الفيديو.
+                    </video>
+                </li>
+                <li>
+                    <p>التدريب الرقمي</p>
+                    <img class="facility-image" src="تدريب رقمي.jpeg" >
+                </li>
+                <li>
+                    <p>خدمة المساعدة على حمل أدوات الجولف</p>
+                    <img class="facility-image" src="خدمة مساعدة.jpeg" >
+                </li>
+            </ul>
+    </div>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>HALE IN ONE </title>
+        <link rel="icon" href="https://i.pinimg.com/736x/83/82/97/838297f429b551804713f98bdf3c309a.jpg"/>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css">
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <header class="header">
+            <a href="#" class="logo">нσℓє ɪи σиє</a>
+           
+            <nav class="navbar">
+                 <a href="Facilities.html">المرافق</a>
+            <a href="Packages.html">الحزم</a>
+             <a href="About.html">عنا</a>
+            <a href="index.html" >الصفحة الرئيسية</a>
+            <a href="F&Q.HTML">F&Q</a>
+           <a href="sing in.html" class="active">تسجيل الدخول</a>
+                      
+
+        </nav>
+        </header>
+        <section class="home">
+           <div class="home-content">
+              <h1>استمتع بعطلتك معنا</h1>
+             <h1>نقدم لك أفضل تجربة جولف في البرتغال</h1>
+                <div class="btn-box">
+                    <a href="contactUs.html">تواصل معنا</a>
+                    
+                </div>
+           </div>
+        <div class="bottom-container">
+            <div class="voice-input-container">
+                <label for="voiceInput">:استخدم صوتك للكتابة</label>
+                <input type="text" id="voiceInput" placeholder="تحدث هنا..." class="voice-input">
+            </div>
+            <div class="accessibility-buttons">
+                <button onclick="enableScreenReader()" aria-label="تفعيل قارئ الشاشة">🗣️</button>
+                <button onclick="startVoiceRecognition()" aria-label="إدخال صوتي">🎙️</button>
+            </div>
+        </div>
+    <script> 
+        function enableScreenReader() {
+    alert("تم تفعيل قارئ الشاشة، سيقوم بقراءة المحتوى تلقائيًا.");
+        }
+
+        function startVoiceRecognition() {
+    let recognition = new (window.SpeechRecognition || window.webkitSpeechRecognition)();
+    recognition.lang = "ar";
+    recognition.onresult = function(event) {
+        document.getElementById("voiceInput").value = event.results[0][0].transcript;
+    };
+    recognition.start();
+}
+    </script>
+           <div class="home-sci">
+           <a href="#"><i class='bx bxl-twitter' ></i></a>
+           <a href="#"><i class='bx bxl-instagram'></i></a>
+           <a href="#"><i class='bx bxl-linkedin'></i></a>
+           </div>
+           <span class="home-imgHover"></span>
+           
+        </section>
+    <div class="settings-container">
+        <button onclick="window.location.href='setting.html';" class="settings-btn">☰</button>
+    </div>
+</body>
+</html>
+        
+<footer>
+    <p>© 2025 Golf Website |Sateen Al-helali</p>
+</footer>
+  
+    </body>
+</html>

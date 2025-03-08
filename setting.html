@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الإعدادات</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+            direction: rtl;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .container {
+            width: 50%;
+            background: white;
+            padding: 20px;
+            margin: auto;
+            margin-top: 50px;
+            border-radius: 30px;
+            box-shadow: 0 0 10px rgba(45, 224, 28, 0.774);
+        }
+        label, input, select {
+            display: block;
+            width: 90%;
+            margin: 10px auto;
+            padding: 8px;
+        }
+        .btn {
+            background: green;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            width: 50%;
+        }
+        .dark-mode {
+            background-color: #2c2c2c;
+            color: white;
+        }
+        .dark-mode .container {
+            background: #444;
+        }
+    </style>
+    
+</head>
+<body>
+    <div class="container">
+        <h2 id="settings-title">الإعدادات</h2>
+        
+        <label id="username-label">اسم المستخدم</label>
+        <input type="text" placeholder="أدخل اسم المستخدم">
+
+        <label id="email-label">البريد الإلكتروني</label>
+        <input type="email" placeholder="أدخل بريدك الإلكتروني">
+
+        <label id="password-label">تحديث كلمة المرور</label>
+        <input type="password" placeholder="********">
+
+        <label id="theme-label">المظهر</label>
+        <select id="theme-selector" onchange="toggleDarkMode()">
+            <option value="light">الوضع العادي</option>
+            <option value="dark">الوضع الليلي</option>
+        </select>
+
+        <label id="notifications-label">الإشعارات</label>
+        <input type="checkbox"> <span id="email-notify">تفعيل إشعارات البريد الإلكتروني</span> <br>
+        <input type="checkbox"> <span id="browser-notify">تفعيل إشعارات المتصفح</span> <br>
+        
+        <label id="language-label">اللغة</label>
+        <select id="language-selector" onchange="changeLanguage()">
+            <option value="ar">العربية</option>
+            <option value="en">English</option>
+            <option value="fr">Français</option>
+        </select>
+        
+        <button class="btn" onclick="goToHome()" id="save-btn">حفظ</button>
+    </div>
+
+    <script>
+        // كائن يحتوي على الترجمات للغات المختلفة
+        const translations = {
+            ar: {
+                "settings-title": "الإعدادات",
+                "username-label": "اسم المستخدم",
+                "email-label": "البريد الإلكتروني",
+                "password-label": "تحديث كلمة المرور",
+                "theme-label": "المظهر",
+                "notifications-label": "الإشعارات",
+                "email-notify": "تفعيل إشعارات البريد الإلكتروني",
+                "browser-notify": "تفعيل إشعارات المتصفح",
+                "language-label": "اللغة",
+                "save-btn": "حفظ"
+            },
+            en: {
+                "settings-title": "Settings",
+                "username-label": "Username",
+                "email-label": "Email",
+                "password-label": "Update Password",
+                "theme-label": "Theme",
+                "notifications-label": "Notifications",
+                "email-notify": "Enable email notifications",
+                "browser-notify": "Enable browser notifications",
+                "language-label": "Language",
+                "save-btn": "Save"
+            },
+            fr: {
+                "settings-title": "Paramètres",
+                "username-label": "Nom d'utilisateur",
+                "email-label": "Email",
+                "password-label": "Mettre à jour le mot de passe",
+                "theme-label": "Thème",
+                "notifications-label": "Notifications",
+                "email-notify": "Activer les notifications par e-mail",
+                "browser-notify": "Activer les notifications du navigateur",
+                "language-label": "Langue",
+                "save-btn": "Enregistrer"
+            }
+        };
+
+        function changeLanguage() {
+            const lang = document.getElementById("language-selector").value;
+            localStorage.setItem("selectedLanguage", lang);
+            applyTranslations(lang);
+        }
+
+        function applyTranslations(lang) {
+            const elements = Object.keys(translations[lang]);
+            elements.forEach(id => {
+                document.getElementById(id).textContent = translations[lang][id];
+            });
+        }
+
+        // عند تحميل الصفحة، يتم ضبط اللغة بناءً على الاختيار السابق
+        window.onload = function() {
+            const savedLang = localStorage.getItem("selectedLanguage") || "ar";
+            document.getElementById("language-selector").value = savedLang;
+            applyTranslations(savedLang);
+        };
+
+        function goToHome() {
+            alert(translations[localStorage.getItem("selectedLanguage") || "ar"]["save-btn"] + " تم الحفظ بنجاح");
+            window.location.href = "index.html"; // استبدل هذا برابط الصفحة الرئيسية
+        }
+
+        function toggleDarkMode() {
+            const theme = document.getElementById("theme-selector").value;
+            if (theme === "dark") {
+                document.body.classList.add("dark-mode");
+            } else {
+                document.body.classList.remove("dark-mode");
+            }
+        }
+    </script>
+</body>
+</html>
